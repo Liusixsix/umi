@@ -9,9 +9,6 @@
     "test:coverage": "umi-test --coverage",
     "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx "
   },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": "npm run lint-staged:js",
     "*.{js,jsx,less,md,json}": [
