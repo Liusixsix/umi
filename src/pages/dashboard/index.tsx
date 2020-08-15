@@ -3,7 +3,7 @@ import AdjoinMatrix from './utils'
 import SpecAdjoinMatrix from './utils2'
 import './index.less'
 let specList = [
-  { title: "颜色", list: ["红色", "紫色"] },
+  // { title: "颜色", list: ["红色", "紫色"] },
   { title: "套餐", list: ["套餐一", "套餐二"] },
   { title: "内存", list: ["64G", "128G", "256G"] },
 ];
@@ -23,8 +23,10 @@ const Spec: React.FC = () => {
   const specAdjoinMatrix = useMemo(() => new SpecAdjoinMatrix(specList, specCombinationList), [specList, specCombinationList]);
   // 获得可选项表
   const optionSpecs = specAdjoinMatrix.getSpecscOptions(specsS);
-
+ 
   const handleClick = function(bool: boolean, text: string, index: number) {
+    console.log(optionSpecs)
+
     // 排除可选规格里面没有的规格
     if (specsS[index] !== text && !bool) return;
     // 根据text判断是否已经被选中了

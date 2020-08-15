@@ -71,8 +71,7 @@ const SetTing: React.FC = (props: any) => {
     const onClose = () => {
         setVisible(false);
     };
-    const onChange = (key: string, value: string|boolean) => {
-        console.log(key,value)
+    const onChange = (key: string, value: string | boolean) => {
         props.dispatch({
             type: 'setting/updateLayoutSettings',
             payload: {
