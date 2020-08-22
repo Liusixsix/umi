@@ -8,7 +8,7 @@ interface ItemProps {
     check: boolean;
     count: number;
     onChange?: (index: number) => void;
-    index?: number;
+    index?: number
 }
 
 type Iprop = ItemProps[];
